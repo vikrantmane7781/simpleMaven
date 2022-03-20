@@ -1,0 +1,7 @@
+const toggle=()=>{
+	if($('.sidebar').is(":visible")){
+		$('.sidebar').css("display","none");
+	}else{
+		
+	}
+};

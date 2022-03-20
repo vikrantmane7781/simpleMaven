@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+	<section>
+	
+						
+					
+		<div class="card mr-3 ml-3" >
+			<div th:if="${uu}" class="card-body" >
+				<div class="container text-center">
+					<img class="my_profile"
+						style="height: 200px; width: 200px; border-radius: 50%"
+						th:src="@{'/image/'+${uu.imgUrl}}" alt="">
+					<h3 class="mt-3">
+						<span th:text="${uu.name}"></span>
+					</h3>
+
+
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">#ID</th>
+								<th scope="col"><span th:text="${uu.id}"></span></th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">Email</th>
+								<td ><span th:text="${uu.email}"></span></td>
+								
+							</tr>
+							<tr>
+								<th scope="row">Phone</th>
+								<td ><span th:text="${uu.role}"></span></td>
+								
+							</tr>
+							<tr>
+								<th scope="row">Work</th>
+								<td ><span th:text="${uu.about}"></span></td>
+								
+							</tr>
+						</tbody>
+						
+					
+					</table>
+					
+						
+						
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

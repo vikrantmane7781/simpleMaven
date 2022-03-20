@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+	<section>
+		<h2>User Data</h2>
+		<h4>Username <span th:text="${uu.email}"></span></h4>
+		<h4>Name <span th:text="${uu.name}"></span></h4>
+		<h4>Role <span th:text="${uu.role}"></span></h4>
+	</section>
+</body>
+</html>

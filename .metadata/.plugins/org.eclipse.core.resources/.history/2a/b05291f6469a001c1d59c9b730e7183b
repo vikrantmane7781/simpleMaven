@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card">
+				<div class="card-body text-center">
+					<img class="my_profile"
+						style="height: 200px; width: 200px; border-radius: 50%"
+						th:src="@{/img/download2.png}" alt="">
+				</div>
+				<h1 class="text-center mt-3 text-secondary font-italic font-weight-light">
+				Start Adding your contact....
+				</h1>
+				
+				<button class="btn btn-primary btn-block text-uppercase mt-4 mb-5">Add new contact</button>
+			</div>
+		</div>
+		
+	</section>
+</body>
+</html>

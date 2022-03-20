@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+	<section>
+		<div class="card">
+			<div class="card-body">
+
+				<h1 class="text-center">Update Contact</h1>
+				<div class="container-fluid mt-1">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<form action="#" th:object="${contact}" method="post"
+								enctype="multipart/form-data"
+								th:action="@{/user/process-contact-update}" class="mt-2">
+								
+								
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text mr-3">
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<input type="number" id="cid"
+									th:value="${contact.cid}" name="cid"
+										 class="form-control" readonly/>
+								</div>
+								
+								
+								<!-- first input -->
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text mr-3">
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<input type="text" id="firstname"
+									th:value="${contact.name}" name="name"
+										placeholder="Enter name here" class="form-control" required />
+								</div>
+
+								<!-- second input -->
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text mr-3">
+											<i class="fa fa-user-alt"></i>
+										</div>
+									</div>
+									<input type="text" id="secondname"
+									th:value="${contact.secondname}" name="secondname"
+										placeholder="Enter secondname here" class="form-control" />
+								</div>
+
+								<!-- phone input -->
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text mr-3">
+											<i class="fa fa-phone"></i>
+										</div>
+									</div>
+									<input type="number" id="phone" name="phone"
+								th:value="${contact.phone}" placeholder="Enter phone number here" class="form-control" />
+								</div>
+
+								<!-- email input -->
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text mr-3">@</div>
+									</div>
+									<input type="email" id="email" name="email"
+										th:value="${contact.email}" placeholder="Enter email here" class="form-control" />
+								</div>
+
+								<!-- work input -->
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text mr-3">
+											<i class="fa fa-briefcase"></i>
+										</div>
+									</div>
+									<input type="work" id="work" name="work"
+										th:value="${contact.work}" placeholder="Enter work here" class="form-control" />
+								</div>
+
+								<!-- description input -->
+								<div class="form-group mt-3">
+									<textarea th:utext="${contact.description}" name="description" class="form-control"
+										id="description" rows="12"></textarea>
+								</div>
+								
+								
+								<!-- ||||||||||||||||| -->
+								<div class="container text-center">
+									<img class="img-fluid" style="height:200px;width:200px;border-radius:50%" th:src="@{'/image/'+${contact.image}}">
+								</div>
+								
+								<p class="text-secondary">Choose new photo</p>
+								<!-- Custome file -->
+								<div class="custome-file mt-3">
+									<input type="file" name="gimage" th:value="@{'/image/'+${contact.image}}"/>
+								</div>
+								<!-- ||||||||||||||||| -->
+							
+							
+								<div class="container text-center mt-2">
+									<button type="submit" class="btn btn-outline-primary">Submit
+										contact</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script
+			src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
+			referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+      tinymce.init({
+        selector: '#description'
+      });
+    </script>
+	</section>
+</body>
+</html>

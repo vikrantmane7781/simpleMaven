@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+
+
+	<section>
+		<div class="container ">
+			<div class="row" style="margin-top: 70px;">
+				<div class="col-md-6 offset-md-3 pd-2"
+					style="background: white; padding: 30px;">
+					<form>
+						<div class="form-group">
+						<input type="email" placeholder="Enter email here...">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

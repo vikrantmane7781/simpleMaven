@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+	<section>
+		<div class="card mr-3 ml-3">
+			<div class="card-body">
+				<div class="container taxt-center">
+					<img class="my_profile" style="height:200px;width:200px" th:src="@{'/image/'+${conta.image}}" alt="">
+					
+				
+				</div>
+			</div>
+		</div>
+		
+	</section>
+</body>
+</html>

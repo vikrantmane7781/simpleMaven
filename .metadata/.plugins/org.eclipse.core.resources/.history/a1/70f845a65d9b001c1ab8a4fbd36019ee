@@ -1,0 +1,39 @@
+package com.example.AllSpringerBoot.service;
+
+
+
+
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmailService {
+	
+	public boolean sendEmail(String subject,String message,String to) {
+		boolean f=false;
+		String from="gamaray7781@gmail.com";
+		String host="smtp.gmail.com";
+		
+		Properties properties=System.getProperties();
+		
+		
+		///host
+		properties.put("mail.smtp.host",host);
+		properties.put("mail.smtp.port","456");
+		properties.put("mail.smtp.ssl.enable","true");
+		
+		Session session=Session.getInstance(properties,new Authenticator()){
+			
+			@Override
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication("gamaray7781@gmail.com", "*****");
+			}
+		});
+		
+	}
+}

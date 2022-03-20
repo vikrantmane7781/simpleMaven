@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card">
+				<div class="card-body">
+					<img class="my_profile"
+						style="height: 200px; width: 200px; border-radius: 50%"
+						th:src="/img/download2.png" alt="">
+				</div>
+			</div>
+		</div>
+		
+	</section>
+</body>
+</html>
