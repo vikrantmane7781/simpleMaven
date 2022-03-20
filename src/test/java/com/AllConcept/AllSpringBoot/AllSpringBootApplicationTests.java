@@ -8,6 +8,7 @@ class AllSpringBootApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("Added");
 	}
 
 }
